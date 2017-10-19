@@ -46,11 +46,3 @@ elif [ "$1" == "open-source" ]
 then
    sudo docker run -ti hibench-docker-opensource /bin/bash -c '/root/runexample.sh'
 fi
-
-sudo docker cp /root/HiBench/report/dfsioe/hadoop/conf/../bench.log /tmp/hibenchLogs
-
-sudo docker cp /tmp/wordcount.perf /tmp/hibenchLogs/wordcount.perf
-sudo docker cp /tmp/sort.perf /tmp/hibenchLogs/sort.perf
-sudo docker cp /tmp/dfsioe.perf /tmp/hibenchLogs/dfsioe.perf
-sudo docker cp /tmp/terasort.perf /tmp/hibenchLogs/terasort.perf
-sudo docker cp /tmp/sleep.perf /tmp/hibenchLogs/sleep.perf
