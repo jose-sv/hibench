@@ -16,3 +16,6 @@ report/
 .settings/
 conf/hadoop.conf
 conf/spark.conf
+Session.vim
+log
+*.log
