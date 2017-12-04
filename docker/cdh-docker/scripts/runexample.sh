@@ -9,11 +9,17 @@ rm -rf /etc/hostsbak
 /usr/bin/restart_hadoop_spark.sh
 echo "running wordcount"
 ${HIBENCH_HOME}/bin/workloads/ml/als/prepare/prepare.sh
-echo 'prepare completed, attach perf, then press a key'
-read
+
+echo '|----------------------------------------------|'
+echo '|-------------------PERF.RUN-------------------|'
+echo '|----------------------------------------------|'
+
 ${HIBENCH_HOME}/bin/workloads/ml/als/spark/run.sh
-echo 'run completed, dettach perf, then press a key'
-read
+
+echo '|----------------------------------------------|'
+echo '|-------------------PERF.STOP------------------|'
+echo '|----------------------------------------------|'
+
 # echo "running sort"
 # ${HIBENCH_HOME}/bin/workloads/micro/sort/prepare/prepare.sh
 # perf stat -e LLC-loads,LLC-load-misses,LLC-stores,LLC-prefetches -o /tmp/sort.perf ${HIBENCH_HOME}/bin/workloads/micro/sort/hadoop/run.sh
